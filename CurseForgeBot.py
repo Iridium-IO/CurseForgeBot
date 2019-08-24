@@ -31,7 +31,7 @@ def authenticate():
 
 
 def getComments(reddit):
-    for comment in reddit.subreddit('feedthebeastbottest').stream.comments():
+    for comment in reddit.subreddit('feedthebeast+mcmodfinder').stream.comments():
         resultsT = re.findall(r'\[\[(.*?)\]\]', comment.body.replace('\\',''))
          
         if len(resultsT) != 0:    
