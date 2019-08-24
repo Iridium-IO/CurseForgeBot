@@ -23,10 +23,10 @@ def ResponseFailed():
     print(bcolors.FAIL + 'Failed to submit response\n' + bcolors.ENDC)
 
 def ModFound(searchName, foundName):
-    print(bcolors.OKGREEN + '| ' + bcolors.ENDC + f'- {searchName}: {foundName}')  
+    print(bcolors.OKGREEN + '| ' + bcolors.ENDC + f'- {searchName:<30}  | {foundName}')  
 
 def ModNotFound(searchName):
-    print(bcolors.FAIL + '| '  + f'- {searchName}: No result found' + bcolors.ENDC)    
+    print(bcolors.FAIL + '| '  + f'- {searchName:<30}  | No result found' + bcolors.ENDC)    
 
 class bcolors:
     HEADER = '\033[95m'

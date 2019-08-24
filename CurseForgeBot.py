@@ -1,14 +1,14 @@
 
 ###############################################################
 #CurseForgeBot by ImminentFate
-#Version 2.3
+#Version 2.4
 ###############################################################
 
 import praw, re, json, urllib, os, string
 import FuzzyDBSearch
 import CurseForgeBot_Debug as DebugS
 
-DebugS.Version(2.2)
+DebugS.Version(2.4)
 
 #u/ModdedPlayer's Curseforge API: https://www.reddit.com/r/feedthebeast/comments/9vj5nm/wip_curseforge_minecraft_mod_indexer_api/
 APIURL = 'https://ddph1n5l22.execute-api.eu-central-1.amazonaws.com/dev/mods?mod_name='
@@ -44,9 +44,9 @@ def getComments(reddit):
                     CommentReply = CommentReply + BuildCommentReply(match)
                 try:
                     comment.reply(CommentReply + '*I am a bot that automatically tries to pull mod links from CurseForge.*')
-                    DebugS.ResponseSubmitted
+                    DebugS.ResponseSubmitted()
                 except:
-                    DebugS.ResponseFailed
+                    DebugS.ResponseFailed()
                     file_obj_r.close() 
                 else:
                     file_obj_r.close()
